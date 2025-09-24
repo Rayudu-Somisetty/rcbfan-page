@@ -1,0 +1,718 @@
+/* RCB Fan Website - Responsive Styles */
+
+/* Mobile First Approach */
+
+/* Extra Small Devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    /* Typography adjustments */
+    html {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Header */
+    .nav-container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .logo-text {
+        display: none;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: var(--spacing-xxl);
+        transition: left 0.3s ease;
+        z-index: var(--z-modal);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin-bottom: var(--spacing-lg);
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: var(--spacing-lg);
+        display: block;
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        margin-top: var(--spacing-md);
+        border-left: 2px solid var(--rcb-gold);
+        padding-left: var(--spacing-lg);
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-extras {
+        display: none;
+    }
+    
+    /* Hero Section */
+    .hero-main-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-cta .btn {
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    .hero-navigation {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    /* Quick Stats */
+    .quick-stats {
+        margin-top: -50px;
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-lg);
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* Section adjustments */
+    .section-highlight {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Players Grid */
+    .players-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .player-card.featured {
+        grid-column: span 1;
+    }
+    
+    .player-image {
+        height: 250px;
+    }
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .news-card.featured {
+        grid-column: span 1;
+    }
+    
+    .news-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .news-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .social-links-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xs);
+    }
+    
+    .social-links-footer .social-link {
+        padding: var(--spacing-xs);
+        font-size: 0.8rem;
+    }
+    
+    .social-links-footer .social-link span {
+        display: none;
+    }
+    
+    .social-links-footer .social-link i {
+        font-size: 1.1rem;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
+/* Small Devices (landscape phones, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Typography */
+    html {
+        font-size: 15px;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    /* Header */
+    .logo-text {
+        display: block;
+        font-size: 1rem;
+    }
+    
+    .nav-menu {
+        gap: var(--spacing-md);
+    }
+    
+    .nav-extras {
+        gap: var(--spacing-md);
+    }
+    
+    .search-input {
+        width: 150px;
+    }
+    
+    .search-input:focus {
+        width: 180px;
+    }
+    
+    /* Hero Section */
+    .hero-main-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-cta {
+        gap: var(--spacing-md);
+    }
+    
+    /* Quick Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Players Grid */
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .player-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .news-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium Devices (tablets, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Header */
+    .nav-container {
+        padding: 0 var(--spacing-xl);
+    }
+    
+    .nav-menu {
+        gap: var(--spacing-lg);
+    }
+    
+    .search-input {
+        width: 180px;
+    }
+    
+    .search-input:focus {
+        width: 220px;
+    }
+    
+    /* Hero Section */
+    .hero-main-title {
+        font-size: 3.5rem;
+    }
+    
+    /* Quick Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Players Grid */
+    .players-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .player-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .news-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Devices (desktops, 1025px to 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    /* Container max-width already set in main.css */
+    
+    /* Players Grid */
+    .players-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .player-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .news-card.featured {
+        grid-column: span 2;
+    }
+}
+
+/* Extra Large Devices (large desktops, 1201px and up) */
+@media (min-width: 1201px) {
+    /* Enhanced spacing for larger screens */
+    .container {
+        max-width: 1400px;
+    }
+    
+    /* Hero Section */
+    .hero-main-title {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    /* Quick Stats */
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Players Grid */
+    .players-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .player-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .news-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+    .hero-section {
+        height: 100vh;
+        min-height: 500px;
+    }
+    
+    .hero-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-cta {
+        gap: var(--spacing-md);
+    }
+    
+    .quick-stats {
+        margin-top: -80px;
+    }
+}
+
+/* High DPI/Retina Display Adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Enhance visual elements for high-DPI displays */
+    .hero-bg-img,
+    .player-image img,
+    .news-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+    
+    /* Thinner borders and sharper shadows */
+    .btn {
+        border-width: 1px;
+    }
+    
+    .nav-link:before {
+        height: 1px;
+    }
+    
+    .player-card,
+    .news-card {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .player-card:hover,
+    .news-card:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-slide {
+        transition: none;
+    }
+    
+    .hero-nav-btn,
+    .btn,
+    .nav-link,
+    .player-card,
+    .news-card {
+        transition: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray-100: #1a1a1a;
+        --gray-200: #2d2d2d;
+        --gray-300: #404040;
+        --gray-400: #525252;
+        --gray-500: #737373;
+        --gray-600: #a3a3a3;
+        --gray-700: #d4d4d4;
+        --gray-800: #e5e5e5;
+        --gray-900: #f5f5f5;
+    }
+    
+    body {
+        background-color: var(--gray-100);
+        color: var(--gray-800);
+    }
+    
+    .squad-highlight {
+        background-color: var(--gray-200);
+    }
+    
+    .news-card {
+        background-color: var(--gray-200);
+        border: 1px solid var(--gray-300);
+    }
+    
+    .search-input {
+        background-color: var(--gray-300);
+        border-color: var(--gray-400);
+        color: var(--gray-800);
+    }
+}
+
+/* Print Styles */
+@media print {
+    /* Hide non-essential elements */
+    .main-header,
+    .hero-navigation,
+    .hero-indicators,
+    .social-links,
+    .nav-extras,
+    .main-footer,
+    .btn {
+        display: none !important;
+    }
+    
+    /* Adjust colors for print */
+    body {
+        color: black;
+        background: white;
+    }
+    
+    .hero-content {
+        color: black;
+    }
+    
+    .section-title {
+        color: black;
+    }
+    
+    /* Optimize spacing */
+    .hero-section {
+        height: auto;
+        min-height: 300px;
+        page-break-after: always;
+    }
+    
+    .section-highlight {
+        page-break-inside: avoid;
+        padding: var(--spacing-lg) 0;
+    }
+    
+    /* Ensure images are visible */
+    .hero-bg-img,
+    .player-image img,
+    .news-image img {
+        opacity: 0.8;
+    }
+    
+    /* Font adjustments */
+    html {
+        font-size: 12pt;
+    }
+    
+    h1 {
+        font-size: 24pt;
+    }
+    
+    h2 {
+        font-size: 20pt;
+    }
+    
+    h3 {
+        font-size: 16pt;
+    }
+    
+    /* Remove shadows and effects */
+    *,
+    *::before,
+    *::after {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+        backdrop-filter: none !important;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-contrast: high) {
+    /* Increase contrast for better accessibility */
+    .hero-overlay {
+        background: linear-gradient(
+            135deg,
+            rgba(228, 30, 35, 0.9) 0%,
+            rgba(0, 0, 0, 0.8) 50%,
+            rgba(255, 215, 0, 0.5) 100%
+        );
+    }
+    
+    .nav-link:before {
+        height: 3px;
+    }
+    
+    .btn {
+        border-width: 2px;
+    }
+    
+    .player-overlay,
+    .hero-overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* Focus management for keyboard navigation */
+@media (hover: none) and (pointer: coarse) {
+    /* Touch device optimizations */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .social-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .hero-nav-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .indicator {
+        min-height: 44px;
+        min-width: 44px;
+        border-radius: 50%;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .player-card:hover,
+    .news-card:hover,
+    .stat-item:hover {
+        transform: none;
+    }
+    
+    .btn:hover:before {
+        left: -100%;
+    }
+}
+
+/* Ultra-wide screen support */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .hero-main-title {
+        font-size: 6rem;
+    }
+    
+    .players-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .player-card.featured {
+        grid-column: span 2;
+    }
+    
+    .news-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .news-card.featured {
+        grid-column: span 2;
+    }
+}
